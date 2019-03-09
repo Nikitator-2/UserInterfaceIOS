@@ -68,7 +68,11 @@ class ViewController: UIViewController {
                 performSegue(withIdentifier: signInSegue, sender: self)
                 
             } else {
-                    print("You shall not pass!!!")
+                let alert = UIAlertController(title: "Ошибка", message: "Вы ввели неверные данные", preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alert.addAction(action)
+                present(alert, animated: true, completion: nil)
+                
             }
             
         }
